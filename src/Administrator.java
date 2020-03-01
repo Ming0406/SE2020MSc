@@ -79,7 +79,7 @@ public class Administrator extends Account{
 		}
 	}
 
-	// checkPTTComand is check the order from PTT Director
+	// checkPTTCommand is check the order from PTT Director
 	public void checkPTTCommand() {
 		Order order = new Order();
 		String path = "OrderFromPTTDirector";
