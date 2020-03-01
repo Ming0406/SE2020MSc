@@ -10,7 +10,7 @@ public class Test {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String str = "";
-		
+
 		try {
 			String path = System.getProperty("user.dir") + "\\test";
 			Scanner in=new Scanner(new File(path));
@@ -21,7 +21,7 @@ public class Test {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		
+
 		try {
 			String path = System.getProperty("user.dir") + "\\test";
 			BufferedWriter bw = new BufferedWriter(new FileWriter(path));
@@ -33,7 +33,7 @@ public class Test {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
 
 }

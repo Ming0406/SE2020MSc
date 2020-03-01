@@ -1,8 +1,17 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/*
+ * Administrator is most complex class, because administrators need to connect all other three teaching staff.
+ * Summarize the function of Administrator class:
+ * 	1. read the order from class directors.
+ * 	2. send the requirement to PTT directors.
+ * 	3. read the agreement from PTT directors.
+ * 	4. generate the training list and send to teachers.
+ */
+
 public class Administrator extends Account{
-	
+
 	private String name;
 	private int password;
 	private int job;
@@ -15,14 +24,16 @@ public class Administrator extends Account{
 		this.password = password;
 		this.job = job;
 	}
-	
+
+	// read the order form class director. Using the .getOrderList() of order class.
 	public void readOrder() {
 		String path = "OrderFromClassDirector";
 		Order order = new Order();
 		OFromClass = order.getOrderList(path);
 		order.printOrder(OFromClass);
 	}
-	
+
+	// print all teachers information.
 	public void printTeacherInfo() {
 		AccountList a = new AccountList();
 		ArrayList<Account> accountList = a.getAccountList();
@@ -31,24 +42,25 @@ public class Administrator extends Account{
 				System.out.println(accountList.get(i));
 			}
 		}
-		
+
 	}
-	
+
+	// Give request to PTT Director, the result will be stored in the OderFromAdministrator.txt.
 	public void sendRequest() {
 		AccountList a = new AccountList();
 		ArrayList<Account> accountList = a.getAccountList();
 		System.out.println("Now, we are generating the work list, which will be sent to PTT director.");
 		System.out.println("Who need to be trained? You can choose from teachers' list: ");
-		
+
 		for (int i=0 ; i<accountList.size(); i++) {
 			if(accountList.get(i).getJob() == 4 || accountList.get(i).getJob() == 5 || accountList.get(i).getJob() == 6) {
 				System.out.print(accountList.get(i).getName() + " |");
 			}
 		}
-		
+
 		Scanner in =  new Scanner(System.in);
 		String name = in.nextLine();
-		
+
 		System.out.println("Which class do you want to send them? Choose from below");
 		for (int i=0 ; i<accountList.size(); i++) {
 			if(accountList.get(i).getJob() == 1) {
@@ -66,7 +78,8 @@ public class Administrator extends Account{
 			}
 		}
 	}
-	
+
+	// checkPTTComand is check the order from PTT Director
 	public void checkPTTCommand() {
 		Order order = new Order();
 		String path = "OrderFromPTTDirector";
@@ -74,6 +87,7 @@ public class Administrator extends Account{
 		order.printOrder(OFromPTT);
 	}
 
+	// give the training list to teachers.
 	public void giveOrder() {
 		AccountList a = new AccountList();
 		Scanner in = new Scanner(System.in);
@@ -84,7 +98,7 @@ public class Administrator extends Account{
 				System.out.print(accountList.get(i).getName() + " |");
 			}
 		}
-		
+
 		String str = in.nextLine();
 		str += " ";
 		System.out.println("Which class do you want to send them? Choose from below");
@@ -101,7 +115,7 @@ public class Administrator extends Account{
 		ReadWriteFiles rf = new ReadWriteFiles();
 		rf.writeFiles(path, str);
 	}
-	
+
 	public static void main(String args[]) {
 		Administrator a = new Administrator("Jin", 222, 2);
 		a.readOrder();

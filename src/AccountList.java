@@ -5,7 +5,8 @@ import java.util.Scanner;
 
 public class AccountList {
 	private ArrayList<Account> accountList = new ArrayList<Account>();
-	
+
+	// this class is to scann the employee list and generate an arrayList to store all the information.
 	public ArrayList<Account> getAccountList(){
 		String name;
 		int password;
@@ -26,11 +27,11 @@ public class AccountList {
 		}catch(IOException e) {
 			e.getStackTrace();
 		}
-		
+
 		return accountList;
 	}
-	
-	
+
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		AccountList a = new AccountList();

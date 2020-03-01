@@ -3,17 +3,24 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/*
+ * This class is the account class, which contained user name, user password and users' job:
+ * the account list is stored inside the Employee information.txt files.
+ *
+ */
 public class Account {
-	
+
 	private String name = "";
 	private int password = 0;
 	private int job = 0;
+	// three attributes: name, password and job.
 	public Account(String name, int password, int job){
 		this.name = name;
 		this.password = password;
 		this.job = job;
 	}
-	
+
+	// we want this account object can be cloneable.
 	public Object clone() {
 		Object o = null;
 		try {
@@ -23,12 +30,12 @@ public class Account {
 		}
 		return o;
 	}
-	
+
 	public String toString() {
 		return "my name is " + name + ", my job is " + job;
 	}
-	
-	
+
+	// test the filereader.
 	public static void main(String arg[]) {
 		String name;
 		int password;
@@ -50,7 +57,7 @@ public class Account {
 		}catch(IOException e) {
 			e.getStackTrace();
 		}
-		
+
 		for (int i = 0; i < accountList.size(); i++) {
 			System.out.println(accountList.get(i));
 		}

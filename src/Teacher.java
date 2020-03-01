@@ -3,7 +3,15 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/*
+ * Teacher only need to do one thing, which is read the training list.
+ * This training list is carried by a list of request object.
+ * So the first thing is to analyze the TrainingList.txt files and generate the request list.
+ * first String is the teachers' name, the second String is the class name, the rest of line is the training list.
+ * So if the teacher's name equals to a requst.getTecherName then, read this request.
+ */
 public class Teacher extends Account{
+	// analyze the TrainingList.txt file.
 	String name;
 	int password;
 	int job;
@@ -29,13 +37,15 @@ public class Teacher extends Account{
 				String workFor = in.next();
 				String training = in.nextLine();
 				Request request = new Request(name, workFor, training);
+				//  generate the requestList
 				requestList.add(request);
 			}
 		}catch(IOException e) {
 			e.getStackTrace();
 		}
-		
+
 		for (int i = 0; i < requestList.size(); i++) {
+			// if the name is equal then print the request list.
 			if (requestList.get(i).getName().equals(this.name)) {
 				System.out.println("You need to work for " + requestList.get(i).getClassName() + ". You get " + requestList.get(i).getTraining());
 			}

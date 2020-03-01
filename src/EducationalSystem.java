@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/*
+ * Overall Education System. Login the account and do the job based on the different job.
+ */
 public class EducationalSystem {
     private Account a = new Account("Empty", 000, 0);
     private String outCommand = "";
@@ -22,13 +25,14 @@ public class EducationalSystem {
                 System.out.println("Login success.");
             }
         }
-
+        System.out.println(a.getJob());
         return a;
     }
 
 
     public void action() {
         Scanner in = new Scanner(System.in);
+        // job one Class Director
         if(a.getJob() == 1) {
             ClassDirector cd = new ClassDirector(a.getName(), a.getPassword(), a.getJob());
             while(!outCommand.equals("out")) {
@@ -45,13 +49,14 @@ public class EducationalSystem {
                 }
             }
         }else if(a.getJob() == 2) {
+            // Job 2 Administrator
             Administrator admin = new Administrator(a.getName(), a.getPassword(), a.getJob());
             while(!outCommand.equals("out")) {
                 System.out.println("As a administrator, you can:\r\n" +
                         "1.	Read orders from class director.\r\n" +
-                        "2.	Print all teachers�� information inside the educational system.\r\n" +
+                        "2.	Print all teachers' information inside the educational system.\r\n" +
                         "3.	Send a request to PTT Director\r\n" +
-                        "4.	Check PTT Director��s command\r\n" +
+                        "4.	Check PTT Director's command\r\n" +
                         "5.	Give assignment to teachers\r\n" +
                         "6.	Quit\r\n" +
                         "");
@@ -72,6 +77,7 @@ public class EducationalSystem {
                 }
             }
         }else if(a.getJob() == 3) {
+            // Job three PTTDirector
             PTTDirector ptt = new PTTDirector(a.getName(), a.getPassword(), a.getJob());
             while(!outCommand.equals("out")) {
                 System.out.println("As a class director, you can:\r\n" +
@@ -86,6 +92,7 @@ public class EducationalSystem {
                 }
             }
         }else if(a.getJob() == 4 || a.getJob() == 5 || a.getJob() == 6) {
+            // Job 4,5,6 different teacher
             Teacher teacher = new Teacher(a.getName(), a.getPassword(), a.getJob());
             while(!outCommand.equals("out")) {
                 System.out.println("As a teacher, you can:\r\n" +
@@ -101,6 +108,7 @@ public class EducationalSystem {
             }
         }
     }
+
     public static void main(String args[]) {
         EducationalSystem es = new EducationalSystem();
         es.login();
