@@ -8,7 +8,7 @@ import java.util.Scanner;
  * This training list is carried by a list of request object.
  * So the first thing is to analyze the TrainingList.txt files and generate the request list.
  * first String is the teachers' name, the second String is the class name, the rest of line is the training list.
- * So if the teacher's name equals to a requst.getTecherName then, read this request.
+ * So if the teacher's name equals to a request.getTeacherName then, read this request.
  */
 public class Teacher extends Account{
 	// analyze the TrainingList.txt file.

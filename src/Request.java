@@ -6,7 +6,7 @@
  * 	2. Which class this teacher need to join.
  * 	3. Which training this teacher need to undertake.
  *
- * This object will be used to when admistrator send the request to PTTDirector
+ * This object will be used to when administrator send the request to PTTDirector
  * and the teacher read the training list coming from administrator.
  */
 public class Request {

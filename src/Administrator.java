@@ -93,9 +93,9 @@ public class Administrator extends Account{
 		Scanner in = new Scanner(System.in);
 		System.out.println("Select a teacher:");
 		ArrayList<Account> accountList = a.getAccountList();
-		for (int i=0 ; i<accountList.size(); i++) {
-			if(accountList.get(i).getJob() == 4 || accountList.get(i).getJob() == 5 || accountList.get(i).getJob() == 6) {
-				System.out.print(accountList.get(i).getName() + " |");
+		for (Account account : accountList) {
+			if (account.getJob() == 4 || account.getJob() == 5 || account.getJob() == 6) {
+				System.out.print(account.getName() + " |");
 			}
 		}
 

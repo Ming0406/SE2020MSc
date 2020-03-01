@@ -10,9 +10,9 @@ import java.util.Scanner;
  */
 public class Account {
 
-	private String name = "";
-	private int password = 0;
-	private int job = 0;
+	private String name;
+	private int password;
+	private int job;
 	// three attributes: name, password and job.
 	public Account(String name, int password, int job){
 		this.name = name;
@@ -35,7 +35,7 @@ public class Account {
 		return "my name is " + name + ", my job is " + job;
 	}
 
-	// test the filereader.
+	// test the file reader.
 	public static void main(String arg[]) {
 		String name;
 		int password;

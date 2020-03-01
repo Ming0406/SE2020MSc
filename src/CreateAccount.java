@@ -43,6 +43,13 @@ public class CreateAccount {
 		int job;
 		ArrayList<Account> accountList = new ArrayList<Account>();
 		String fn = "Employee Information";
+		return getAccounts(accountList, fn);
+	}
+
+	static ArrayList<Account> getAccounts(ArrayList<Account> accountList, String fn) {
+		String name;
+		int password;
+		int job;
 		try {
 			FileReader fr = new FileReader(fn);
 			Scanner sc = new Scanner(fr);

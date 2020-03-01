@@ -12,23 +12,7 @@ public class AccountList {
 		int password;
 		int job;
 		String fn = System.getProperty("user.dir") + "\\Employee Information";
-		try {
-			FileReader fr = new FileReader(fn);
-			Scanner sc = new Scanner(fr);
-			while(sc.hasNextLine()) {
-				String line = sc.nextLine();
-				Scanner sl = new Scanner(line);
-				name = sl.next();
-				password = sl.nextInt();
-				job = sl.nextInt();
-				Account account = new Account(name, password, job);
-				accountList.add(account);
-			}
-		}catch(IOException e) {
-			e.getStackTrace();
-		}
-
-		return accountList;
+		return getAccounts(accountList, fn);
 	}
 
 
