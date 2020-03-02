@@ -52,9 +52,9 @@ public class ClassDirector extends Account{
 		rf.writeFiles(path, str);
 	}
 
-
+	// Test the Class Director
 	public static void main(String args[]) {
-//		ClassDirector cd = new ClassDirector("Jin", 111, 1);
-//		cd.giveNewAssignment();
+		ClassDirector cd = new ClassDirector("Jin", 111, 1);
+		cd.giveNewAssignment();
 	}
 }

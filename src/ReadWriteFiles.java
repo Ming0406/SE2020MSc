@@ -42,7 +42,7 @@ public class ReadWriteFiles {
 		}
 		return str;
 	}
-
+	
 	public void readFile(String path) {
 		String realPath = System.getProperty("user.dir") + "\\" + path;
 		String str = "";

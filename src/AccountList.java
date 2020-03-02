@@ -31,7 +31,9 @@ public class AccountList {
 		return accountList;
 	}
 
-
+	/*
+	 * Test the accountList
+	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		AccountList a = new AccountList();

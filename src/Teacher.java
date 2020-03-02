@@ -51,6 +51,8 @@ public class Teacher extends Account{
 			}
 		}
 	}
+	
+	// Test Teacher
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Teacher teacher = new Teacher("MathTeacher", 444, 4);

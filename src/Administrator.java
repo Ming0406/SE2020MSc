@@ -79,7 +79,7 @@ public class Administrator extends Account{
 		}
 	}
 
-	// checkPTTCommand is check the order from PTT Director
+	// checkPTTComand is check the order from PTT Director
 	public void checkPTTCommand() {
 		Order order = new Order();
 		String path = "OrderFromPTTDirector";
@@ -116,10 +116,16 @@ public class Administrator extends Account{
 		rf.writeFiles(path, str);
 	}
 
+	// Test the Administrator
 	public static void main(String args[]) {
 		Administrator a = new Administrator("Jin", 222, 2);
+		System.out.println("**************READ THE CLASS DIRECTORS' ORDER*********************");
 		a.readOrder();
+		System.out.println("**************CHECK THE PTT DIRECTORS' COMMAND*********************");
 		a.checkPTTCommand();
+		System.out.println("**************GIVE ORDER TO TEACHERS*****************************");
 		a.giveOrder();
+		System.out.println("**************CHECK THE PTT DIRECTORS' COMMAND*********************");
+		a.checkPTTCommand();
 	}
 }

@@ -1,5 +1,3 @@
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -52,6 +50,7 @@ public class PTTDirector extends Account{
 		rf.writeFiles(path2, cmd);
 	}
 
+	//Test the PTT Director
 	public static void main(String args[]) {
 		PTTDirector pd = new PTTDirector("name", 222, 2);
 		pd.sendCommand();

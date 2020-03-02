@@ -1,4 +1,3 @@
-
 /*
  * Request is the to store the information of teacher training.
  * 	This object contains three useful information:

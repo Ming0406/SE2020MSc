@@ -79,7 +79,7 @@ public class CreateAccount {
 		}
 	}
 
-
+	// Test the create account
 	public static void main(String arg[]) {
 		CreateAccount ca = new CreateAccount();
 		ca.createAccount();

@@ -119,7 +119,22 @@ public class EducationalSystem {
             }
         }
     }
-
+    
+    /*
+     * This is the main method!
+     * we created several user codes for you to test:
+     * name      password    job
+     *	Class     111        1 --- class director
+		Admin      222        2 --- administrator
+		PTT        333        3 --- PTT director
+		MathTeacher 444       4 --- math teacher
+		EnglishTeacher 555    5 --- English teacher
+		ComputerTeacher 666   6 --- computer teacher
+		
+		You can use the name and password to login the system.
+		Once you finish your job, you can input the number of Quit command to quit the system and changed
+		another accounts
+     */
     public static void main(String args[]) {
         EducationalSystem es = new EducationalSystem();
         es.login();
