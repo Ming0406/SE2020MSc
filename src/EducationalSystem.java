@@ -124,7 +124,7 @@ public class EducationalSystem {
      * This is the main method!
      * we created several user codes for you to test:
      * name      password    job
-     *	 Class     111        1 --- class director
+     *	Class     111        1 --- class director
 		Admin      222        2 --- administrator
 		PTT        333        3 --- PTT director
 		MathTeacher 444       4 --- math teacher
