@@ -7,7 +7,14 @@ import java.util.Scanner;
 public class EducationalSystem {
     private Account a = new Account("Empty", 000, 0);
     private String outCommand = "";
-
+    
+    public void printWorkList() {
+    	System.out.println("************************\n" + 
+    					   "*        work list     *\n" +
+    					   "************************\n");
+    					
+    }
+    
     public Account login() {
         Scanner in = new Scanner(System.in);
         System.out.println("Input your name: ");
@@ -36,6 +43,7 @@ public class EducationalSystem {
         if(a.getJob() == 1) {
             ClassDirector cd = new ClassDirector(a.getName(), a.getPassword(), a.getJob());
             while(!outCommand.equals("out")) {
+            	printWorkList();
                 System.out.println("As a class director, you can:\r\n" +
                         "1.	Give new assignment to administrator.\r\n" +
                         "2.	Quit \r\n" +
@@ -52,6 +60,7 @@ public class EducationalSystem {
             // Job 2 Administrator
             Administrator admin = new Administrator(a.getName(), a.getPassword(), a.getJob());
             while(!outCommand.equals("out")) {
+            	printWorkList();
                 System.out.println("As a administrator, you can:\r\n" +
                         "1.	Read orders from class director.\r\n" +
                         "2.	Print all teachers' information inside the educational system.\r\n" +
@@ -80,6 +89,7 @@ public class EducationalSystem {
             // Job three PTTDirector
             PTTDirector ptt = new PTTDirector(a.getName(), a.getPassword(), a.getJob());
             while(!outCommand.equals("out")) {
+            	printWorkList();
                 System.out.println("As a class director, you can:\r\n" +
                         "1.	Send your agreements back to administrator\r\n" +
                         "2.	Quit.\r\n" +
@@ -95,6 +105,7 @@ public class EducationalSystem {
             // Job 4,5,6 different teacher
             Teacher teacher = new Teacher(a.getName(), a.getPassword(), a.getJob());
             while(!outCommand.equals("out")) {
+            	printWorkList();
                 System.out.println("As a teacher, you can:\r\n" +
                         "1.	Check the work list from administrator\r\n" +
                         "2.	Quit.\r\n" +

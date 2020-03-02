@@ -32,7 +32,13 @@ public class Account {
 	}
 
 	public String toString() {
-		return "my name is " + name + ", my job is " + job;
+		if (job == 1) return "my name is " + name + ", my job is Class Director";
+		if (job == 2) return "my name is " + name + ", my job is Administrator";
+		if (job == 3) return "my name is " + name + ", my job is PTT Director";
+		if (job == 4) return "my name is " + name + ", my job is Math Teacher";
+		if (job == 5) return "my name is " + name + ", my job is English Teacher";
+		if (job == 6) return "my name is " + name + ", my job is Computer Teacher";
+		return "You job is not in our system";
 	}
 
 	// test the file reader.
